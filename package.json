@@ -1,0 +1,36 @@
+{
+  "name": "crtrdg-mouse",
+  "version": "0.0.1",
+  "description": "mouse module for crtrdg",
+  "main": "index.js",
+  "scripts": {
+    "test": "beefy test.js:bundle.js --live"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sethvincent/crtrdg-mouse.git"
+  },
+  "keywords": [
+    "games",
+    "html",
+    "canvas",
+    "animation",
+    "requestAnimationFrame",
+    "game library",
+    "mouse",
+    "interaction",
+    "events"
+  ],
+  "author": {
+    "name": "Seth Vincent",
+    "email": "sethvincent@gmail.com",
+    "url": "http://sethvincent.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "inherits": "~2.0.0"
+  },
+  "devDependencies": {
+    "crtrdg-gameloop": "0.0.1"
+  }
+}

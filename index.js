@@ -16,25 +16,29 @@ Mouse.prototype.initializeListeners = function(){
   this.el.addEventListener('click', function(e){
     self.calculateOffset(e, function(location){
       self.emit('click', location);
-    })
+    });
+    return false;
   });
 
   this.el.addEventListener('mousedown', function(e){
     self.calculateOffset(e, function(location){
       self.emit('mousedown', location);
-    })
+    });
+    return false;
   });
 
   this.el.addEventListener('mouseup', function(e){
     self.calculateOffset(e, function(location){
       self.emit('mouseup', location);
-    })
+    });
+    return false;
   });
 
   this.el.addEventListener('mousemove', function(e){
     self.calculateOffset(e, function(location){
       self.emit('mousemove', location);
-    })
+    });
+    return false;
   });
 };
 

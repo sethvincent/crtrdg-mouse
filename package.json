@@ -15,7 +15,6 @@
     "html",
     "canvas",
     "animation",
-    "requestAnimationFrame",
     "game library",
     "mouse",
     "interaction",
@@ -28,7 +27,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "inherits": "~2.0.0"
+    "inherits": "~2.0.0",
+    "vkey": "0.0.2"
   },
   "devDependencies": {
     "crtrdg-gameloop": "0.0.1"

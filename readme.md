@@ -36,21 +36,24 @@ npm install -g browserify beefy
 ### Create a game.js file:
 ```
 // use crtrdg-gameloop for animating to the canvas with requestAnimationFrame.
-var Game = require('crtrdg-gameloop');
+var Game = require('gameloop');
 
 // require crtrdg-mouse
 var Mouse = require('crtrdg-mouse');
 
 // create a new game
+var canvas = document.createElement('canvas');
+document.body.appendChild(canvas);
+
 var game = new Game({
-  canvasId: 'game',
-  width: '800',
-  height: '400',
-  backgroundColor: '#ff1f1f'
+  renderer: canvas.getContext('2d')
 });
 
-// create the mouse and pass in the game as an argument
-var mouse = new Mouse(game);
+game.width = canvas.width = 800;
+game.height = canvas.height = 400;
+
+// create the mouse and pass in the game and canvas element as arguments
+var mouse = new Mouse(game, canvas);
 
 // listen for click events
 mouse.on('click', function(loc){

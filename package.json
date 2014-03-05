@@ -31,6 +31,7 @@
     "vkey": "0.0.2"
   },
   "devDependencies": {
-    "crtrdg-gameloop": "0.0.1"
+    "crtrdg-gameloop": "0.0.1",
+    "gameloop": "^0.3.1"
   }
 }

@@ -1,14 +1,17 @@
-var Game = require('crtrdg-gameloop');
+var Game = require('gameloop');
 var Mouse = require('./index');
 
+var canvas = document.createElement('canvas');
+document.body.appendChild(canvas);
+
 var game = new Game({
-  canvasId: 'game',
-  width: '800',
-  height: '400',
-  backgroundColor: '#ff1f1f'
+  renderer: canvas.getContext('2d')
 });
 
-var mouse = new Mouse(game);
+game.width = canvas.width = 800;
+game.height = canvas.height = 400;
+
+var mouse = new Mouse(game, canvas);
 
 mouse.on('click', function(loc){
 	console.log('click at: ', loc);

@@ -4,9 +4,9 @@ var inherits = require('inherits');
 module.exports = Mouse;
 inherits(Mouse, EventEmitter);
 
-function Mouse(game){
+function Mouse(game, el){
   this.game = game || {};
-  this.el = game.canvas;
+  this.el = el || game.el || game.canvas || document;
   this.initializeListeners();
 }
 

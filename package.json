@@ -28,7 +28,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "inherits": "~2.0.0",
+    "inherits": "^2.0.0"
   },
   "devDependencies": {
     "gameloop": "^0.3.1"

@@ -7,6 +7,7 @@ inherits(Mouse, EventEmitter);
 function Mouse(game, el){
   this.game = game || {};
   this.el = el || game.el || game.canvas || document;
+  this.location = {x: 0, y: 0};
   this.initializeListeners();
 }
 
@@ -46,6 +47,8 @@ Mouse.prototype.initializeListeners = function(){
 
     self.calculateOffset(e, function(location){
       self.emit('mousemove', location);
+      self.location.x = location.x;
+      self.location.y = location.y;
     });
     return false;
   }, false);

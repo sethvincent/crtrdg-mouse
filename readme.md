@@ -34,7 +34,7 @@ npm install -g browserify beefy
 ```
 
 ### Create a game.js file:
-```
+```javascript
 // use crtrdg-gameloop for animating to the canvas with requestAnimationFrame.
 var Game = require('gameloop');
 
@@ -73,6 +73,15 @@ mouse.on('mouseup', function(loc){
 // listen for mousemove events
 mouse.on('mousemove', function(loc){
   console.log('mousemove at: ', loc);
+});
+
+// request mouse position directly
+game.on('update', function (interval) {
+  // mouse position is initialised with {x: 0, y: 0}
+  // and gets updated for every mouse move 
+  if(mouse.position.x > this.width) {
+    console.log('where are you going?');
+  }
 });
 ```
 

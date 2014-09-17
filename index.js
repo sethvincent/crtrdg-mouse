@@ -16,7 +16,7 @@ Mouse.prototype.initializeListeners = function(){
 
   this.el.addEventListener('click', function(e){
     e.preventDefault();
-    
+
     self.calculateOffset(e, function(location){
       self.emit('click', location);
     });

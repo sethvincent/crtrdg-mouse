@@ -28,3 +28,12 @@ mouse.on('mouseup', function(loc){
 mouse.on('mousemove', function(loc){
   console.log('mousemove at: ', loc);
 });
+
+// request mouse location directly
+game.on('update', function (interval) {
+  // mouse location is initialised with {x: 0, y: 0}
+  // and gets updated for every mouse move
+  if(mouse.location.x > this.width) {
+    console.log('where are you going?');
+  }
+});

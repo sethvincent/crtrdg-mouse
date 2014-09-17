@@ -1,6 +1,6 @@
 {
   "name": "crtrdg-mouse",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "mouse module for 2d games. designed for games using the canvas.",
   "main": "index.js",
   "scripts": {

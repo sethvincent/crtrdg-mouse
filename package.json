@@ -1,10 +1,11 @@
 {
   "name": "crtrdg-mouse",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "mouse module for 2d games. designed for games using the canvas.",
   "main": "index.js",
   "scripts": {
-    "test": "beefy test.js:bundle.js --live"
+    "build-docs": "documentation-readme -s 'API'",
+    "start": "budo example.js --live"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,12 @@
   },
   "license": "MIT",
   "dependencies": {
+    "eventemitter2": "^0.4.14",
     "inherits": "^2.0.0"
   },
   "devDependencies": {
-    "gameloop": "^0.3.1"
+    "budo": "^7.0.2",
+    "documentation-readme": "^2.1.1",
+    "gameloop": "^1.1.0"
   }
 }
